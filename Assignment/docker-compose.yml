@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  web:
+    container_name: "2022BCD0041_web"
+    build: 
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"  # Mapping host port 8081 to container port 8080
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=mydb
+      - DB_USER=user
+      - DB_PASS=password
+    depends_on:
+      - db
+
+  worker:
+    container_name: "2022BCD0041_worker"
+    build:
+      context: ./worker
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+
+  db:
+    container_name: "2022BCD0041_db"
+    image: postgres:13
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+

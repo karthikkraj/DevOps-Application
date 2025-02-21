@@ -1,0 +1,3 @@
+# For now, just include dependencies for future use.
+# You can add task queue libraries like Celery if needed later.
+
