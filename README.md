@@ -1,4 +1,4 @@
-# DevOps-Assignment
+# DevOps-Application
 # Microservices-Based Application using Docker and Docker Compose
 
 ## Project Overview
@@ -67,8 +67,8 @@ docker-compose down
 
 ---
 
-## Submission Requirements
-- Submit the following files as a Git repository:
+## Files used:
+
   - **Dockerfile** for both Web and Worker services
   - **docker-compose.yml**
   - **Code for Web and Worker Services**
