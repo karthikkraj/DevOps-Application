@@ -51,7 +51,6 @@ docker-compose up --build
 - You should see a page displaying:
   - **Name:** Karthik Raj
   - **Roll No:** 2022BCD0041
-  - **Short Bio:** [Your bio here]
 
 ### 4. Verify Services
 - **Logs:** Check container logs using `docker-compose logs`
